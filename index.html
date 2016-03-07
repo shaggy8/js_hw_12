@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="js/lodash.js"></script>
+	<script src="js/tmpl.js"></script>
+	<script src="js/scripts.js"></script>
+</head>
+<body>
+	<script type="text/tmpl" id="profile">
+		<div class="wrapper">
+			<h1><%=surname%> <%=name%> <%=secondName%></h1>
+			<img src="img/<%=photo%>" alt="фото" title="ААААА!!!">
+			<p class="profession"><%=profession%></p>
+			<p class="reasons-head">Хочу вчити фронтенд тому, що:</p>
+			<ul class="reasons">
+			<%for (var i = 0; i < reasons.length; i++) {%>
+				<li><%=reasons[i]%></li>
+				<%};%>
+			</ul>
+			<ul class="contacts">
+				<li>Мій котактний телефон
+					<br><%=phone%>
+				</li>
+				<li>Мій профіль у Facebook
+					<br><a href="<%=fb%>" target="_blank" title="Десь там я є...">facebook.com</a>
+				</li>
+			</ul>
+			<p class="feedback-head">Мій фідбек:</p>
+			<ul class="feedback">
+				<li>
+					<%=feedback%>
+				</li>
+			</ul>
+		</div>
+	</script>
+</body>
+</html>
